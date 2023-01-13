@@ -9,21 +9,10 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="file:///home/lalandejm/softwares/reveal/dist/reveal.css"/>
+<link rel="stylesheet" href="./reveal/dist/reveal.css"/>
 
-<link rel="stylesheet" href="file:///home/lalandejm/softwares/reveal/dist/theme/white.css" id="theme"/>
+<link rel="stylesheet" href="./reveal/dist/theme/white.css" id="theme"/>
 
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'file:///home/lalandejm/softwares/reveal/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
-</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
@@ -35,20 +24,20 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#/slide-orgd2edda0">Objectives</a></li>
-<li><a href="#/slide-org11138ab">The ARSA databases</a></li>
-<li><a href="#/slide-orgadd452e">RTTOV vs 4A: specificities of Radiative Transfer Codes</a></li>
-<li><a href="#/slide-org3bb2f81">Full spectrum Comparison</a></li>
-<li><a href="#/slide-org9aa77ce">Jacobian Comparison</a></li>
+<li><a href="#/slide-org0297872">Objectives</a></li>
+<li><a href="#/slide-org84a2bb4">The ARSA databases</a></li>
+<li><a href="#/slide-org589d566">RTTOV vs 4A: specificities of Radiative Transfer Codes</a></li>
+<li><a href="#/slide-org8b240ce">Full spectrum Comparison</a></li>
+<li><a href="#/slide-org890bb62">Jacobian Comparison</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-orgd2edda0" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org0297872" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgd2edda0">Objectives</h2>
+<h2 id="org0297872">Objectives</h2>
 <ul>
 <li class="fragment appear">Follow recommendations from the ITSC and Trattoria on radiative transfer codes intercomparisons</li>
 <li class="fragment appear">Validation of new developments in Radiative Transfer codes</li>
@@ -61,9 +50,9 @@
 </section>
 </section>
 <section>
-<section id="slide-org11138ab" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org84a2bb4" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="org11138ab">The ARSA databases</h2>
+<h2 id="org84a2bb4">The ARSA databases</h2>
 <div class="column" style="float:left; width:50%">
 <ul style="font-size:30px;text-align: left">
 <li> ARSA (The Analysed RadioSounding Archive+ERA-interim, 43 levels) : P, T, H<sub>2</sub>O, O<sub>3</sub>, T<sub>surf</sub> </li>
@@ -77,7 +66,7 @@
 <div class="column" style="float:left; width:50%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/arsa_map.png" alt="arsa_map.png" border="yes" width="100%" align="center" />
+<p><img src="./fig/arsa_map.png" alt="arsa_map.png" border="yes" width="100%" align="center" />
 </p>
 </div>
 </div>
@@ -86,13 +75,13 @@
 
 <div class="column" style="float:left; width:30%">
 <iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
-data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/prop_iairmass.html" dpi="300" width="300px" height="300px"></iframe>
+data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></iframe>
 </div>
 
 <div class="column" style="float:left; width:70%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
+<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
 </p>
 </div>
 </div>
@@ -100,26 +89,26 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 
 <div class="slide-footer"></div>
 </section>
-<section id="slide-orgc20e6c6" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-orgb7caaf5" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="orgc20e6c6">The ARSA profiles</h3>
+<h3 id="orgb7caaf5">The ARSA profiles</h3>
 <div class="column" style="margin-left: auto; margin-right: auto; width:75%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
+<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
 </p>
 </div>
 </div>
 
 <div class="slide-footer"></div>
 </section>
-<section id="slide-orge9f977a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org7b8776d" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="orge9f977a">Total columns of gases</h3>
+<h3 id="org7b8776d">Total columns of gases</h3>
 <div class="column" style="float:left; width:25%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/TPW_arsa_profiles.png" alt="TPW_arsa_profiles.png" border="none" width="100%" align="center" />
+<p><img src="./fig/TPW_arsa_profiles.png" alt="TPW_arsa_profiles.png" border="none" width="100%" align="center" />
 </p>
 </div>
 </div>
@@ -127,7 +116,7 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 <div class="column" style="float:right; width:25%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/TO3_arsa_profiles.png" alt="TO3_arsa_profiles.png" border="none" width="100%" align="center" />
+<p><img src="./fig/TO3_arsa_profiles.png" alt="TO3_arsa_profiles.png" border="none" width="100%" align="center" />
 </p>
 </div>
 </div>
@@ -136,7 +125,7 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 <div class="column" style="float:left; width:25%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/TCO2_arsa_profiles.png" alt="TCO2_arsa_profiles.png" border="none" width="100%" align="center" />
+<p><img src="./fig/TCO2_arsa_profiles.png" alt="TCO2_arsa_profiles.png" border="none" width="100%" align="center" />
 </p>
 </div>
 </div>
@@ -144,7 +133,7 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 <div class="column" style="float:right; width:25%">
 
 <div class="figure">
-<p><img src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/TCH4_arsa_profiles.png" alt="TCH4_arsa_profiles.png" border="none" width="100%" align="center" />
+<p><img src="./fig/TCH4_arsa_profiles.png" alt="TCH4_arsa_profiles.png" border="none" width="100%" align="center" />
 </p>
 </div>
 </div>
@@ -154,16 +143,16 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 </section>
 </section>
 <section>
-<section id="slide-orgadd452e" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org589d566" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgadd452e">RTTOV vs 4A: specificities of Radiative Transfer Codes</h2>
-<div class="outline-text-2" id="text-orgadd452e">
+<h2 id="org589d566">RTTOV vs 4A: specificities of Radiative Transfer Codes</h2>
+<div class="outline-text-2" id="text-org589d566">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org4b3be91" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-orgb57c20c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org4b3be91">RTTOV vs 4A</h3>
+<h3 id="orgb57c20c">RTTOV vs 4A</h3>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -227,29 +216,29 @@ data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/p
 </section>
 </section>
 <section>
-<section id="slide-org3bb2f81" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org8b240ce" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="org3bb2f81">Full spectrum Comparison</h2>
-<div class="outline-text-2" id="text-org3bb2f81">
+<h2 id="org8b240ce">Full spectrum Comparison</h2>
+<div class="outline-text-2" id="text-org8b240ce">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org3333867" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org4ef2b03" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org3333867">Results of RTTOV vs 4A on the ARSA database</h3>
+<h3 id="org4ef2b03">Results of RTTOV vs 4A on the ARSA database</h3>
 <iframe style="border: none; align: center"
 scrolling="no"
-data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/RTComparison-IREMIS-polar1-allbands.html"
+data-src="./fig/RTComparison-IREMIS-polar1-allbands.html"
 width="1200" height="800"></iframe>
 
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org024157b" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org58c8644" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org024157b">test</h3>
+<h3 id="org58c8644">test</h3>
 <iframe style="border: none; align: center"
 scrolling="no"
-data-src="file:///net/stockagecms/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/test.html"
+data-src="./fig/test.html"
 width="1000" height="800"></iframe>
 
 <p>
@@ -260,16 +249,16 @@ width="1000" height="800"></iframe>
 </section>
 </section>
 <section>
-<section id="slide-org9aa77ce" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org890bb62" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="org9aa77ce">Jacobian Comparison</h2>
-<div class="outline-text-2" id="text-org9aa77ce">
+<h2 id="org890bb62">Jacobian Comparison</h2>
+<div class="outline-text-2" id="text-org890bb62">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org1ded6ba" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-orgc030bbd" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org1ded6ba">Temperature 1/2</h3>
+<h3 id="orgc030bbd">Temperature 1/2</h3>
 <div class="column" style="float:right; width:30%">
 
 <div class="figure">
@@ -297,9 +286,9 @@ width="1000" height="800"></iframe>
 
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org35316c9" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org1cb5f1a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org35316c9">Temperature 2/2</h3>
+<h3 id="org1cb5f1a">Temperature 2/2</h3>
 <div class="column" style="float:right; width:50%">
 
 <div class="figure">
@@ -320,10 +309,10 @@ width="1000" height="800"></iframe>
 </section>
 </div>
 </div>
-<script src="/home/lalandejm/softwares/reveal/dist/reveal.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/markdown/markdown.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/zoom/zoom.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/notes/notes.js"></script>
+<script src="./reveal/dist/reveal.js"></script>
+<script src="./reveal/plugin/markdown/markdown.js"></script>
+<script src="./reveal/plugin/zoom/zoom.js"></script>
+<script src="./reveal/plugin/notes/notes.js"></script>
 
 
 <script>

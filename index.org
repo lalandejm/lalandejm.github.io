@@ -1,0 +1,242 @@
+# Contient tous les paramètres généraux !
+
+ :REVEAL_PROPERTIES:
+#+reveal_root: ./reveal
+
+#+options: reveal_control:nil
+#+options: reveal_global_footer:nil reveal_global_header:nil
+#+options: reveal_height:nil reveal_history:nil reveal_keyboard:nil
+#+options: reveal_overview:nil reveal_progress:nil
+#+options: reveal_rolling_links:nil reveal_single_file:nil
+#+options: reveal_slide_number:nil
+
+#+REVEAL_INIT_OPTIONS: slideNumber:false, width:"100%", height:"100%", margin:0, center:true
+#+reveal_trans: linear
+#+reveal_speed:
+
+#+reveal: split
+#+reveal_theme: white
+#+reveal_extra_css:
+#+reveal_extra_js:
+#+reveal_extra_initial_js:
+#+reveal_hlevel:1
+
+#+reveal_default_slide_background: #FFF
+
+# avec les balise <h?> je joue sur la taille
+# en indiquant que %t je n'affiche pas les auteurs
+#+reveal_title_slide: <h2>%t</h2> <h4>%s</h4> <h6>%a</h6>
+#+reveal_title_slide: 
+
+#+reveal_title_slide_background: file:///home/lalandejm/Documents/logo/logocnrm.png,  file:///home/lalandejm/Documents/logo/logoMF-.png,  file:///home/lalandejm/Documents/logo/logocnrs2.png
+#+reveal_title_slide_background_size: 10%, 10%, 10%
+#+reveal_title_slide_background_position: 20% 90%, 50% 90%, 80% 90%
+#+reveal_title_slide_background_repeat:
+#+reveal_title_slide_background_transition:
+#+reveal_title_slide_background_opacity:
+#+reveal_title_slide_state:
+
+#+reveal_toc_slide_background:
+#+reveal_toc_slide_background_size:
+#+reveal_toc_slide_background_position:
+#+reveal_toc_slide_background_repeat:
+#+reveal_toc_slide_background_transition:
+#+reveal_toc_slide_background_opacity:
+
+
+#+reveal_default_slide_background:
+#+reveal_default_slide_background_size:
+#+reveal_default_slide_background_position:
+#+reveal_default_slide_background_repeat:
+#+reveal_default_slide_background_opacity:
+#+reveal_default_slide_background_transition:
+
+
+#+reveal_mathjax_url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+
+#+reveal_preamble:
+#+reveal_head_preamble:
+#+reveal_postamble:
+#+reveal_prologue:
+#+reveal_epilogue:
+
+#+reveal_slide_header:
+#+reveal_slide_footer:
+
+
+#+reveal_multiplex_id:
+#+reveal_multiplex_secret:
+#+reveal_multiplex_url:
+#+reveal_multiplex_socketio_url:
+
+
+#+reveal_plugins:
+#+reveal_external_plugins:
+
+#+reveal_default_frag_style:
+
+#+reveal_extra_script:
+#+reveal_extra_script_src:
+#+reveal_extra_script_before_src:
+#+reveal_init_options:
+
+:end:
+
+
+#+TITLE: Radiative Transfer Modeling
+#+SUBTITLE: Comparison between RTTOV, 4A and IASI observations
+#+AUTHOR: Jean-Marie Lalande, Raymond Armante, Jérôme Vidot
+#+DATE: <2022-10-15 sam.>
+#+Email: jean-marie.lalande@meteo.fr
+
+#+MAIL: jean-marie.lalande@meteo.fr, raymond.armante@lmd.ipsl.fr,jerome.vidot@meteo.fr
+
+#+OPTIONS: d:nil toc:1 num:nil timestamp:nil
+# contenu JML ---------------------------------------------
+
+* Objectives
+
+
+# pour faire apparaitre progressivement 
+#+ATTR_REVEAL: :frag (appear)
+- Follow recommendations from the ITSC and Trattoria on radiative transfer codes intercomparisons
+- Validation of new developments in Radiative Transfer codes 
+- Identify potential systematic errors in spectroscopic databases, codes, etc
+
+
+* The ARSA databases
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+BEGIN_EXPORT html
+<ul style="font-size:30px;text-align: left">
+<li> ARSA (The Analysed RadioSounding Archive+ERA-interim, 43 levels) : P, T, H<sub>2</sub>O, O<sub>3</sub>, T<sub>surf</sub> </li>
+<li> Emissivities : IREMIS </li>
+<li> Copernicus Atmospheric Monitoring Service (CAMS) : CO<sub>2</sub>, CH<sub>4</sub>
+<li> 15310 atmospheric profiles </li>
+<li> Colocated IASI observations </li>
+</ul>
+#+END_EXPORT
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_HTML: :border yes :width 100% :align center
+[[./fig/arsa_map.png]]
+#+REVEAL_HTML: </div>
+
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:30%">
+#+ATTR_HTML: :border yes :width 100% :align center
+#+BEGIN_EXPORT html
+<iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
+data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></iframe>
+#+END_EXPORT
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:70%">
+#+ATTR_HTML: :border yes :width 75% :align center
+[[./fig/arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+
+** The ARSA profiles
+#+REVEAL_HTML: <div class="column" style="margin-left: auto; margin-right: auto; width:75%">
+#+ATTR_HTML: :border yes :width 75% :align center
+[[./fig/arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+** Total columns of gases
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:25%">
+#+ATTR_HTML: :border none :width 100% :align center
+[[./fig/TPW_arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:25%">
+#+ATTR_HTML: :border none :width 100% :align center
+[[./fig/TO3_arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:25%">
+#+ATTR_HTML: :border none :width 100% :align center
+[[./fig/TCO2_arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:25%">
+#+ATTR_HTML: :border none :width 100% :align center
+[[./fig/TCH4_arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+
+* RTTOV vs 4A: specificities of Radiative Transfer Codes 
+
+** RTTOV vs 4A
+
+                                                                                                                                                                |
+|                    | *RTTOV v13*\cite{Saunders2018} | *4A/OP v1.7*\cite{Scott1981}         |
+|--------------------+--------------------------------+--------------------------------------|
+| *Model type*       | Fast Band model$^{\dagger}$    | Fast Line-By-Line$^{\dagger\dagger}$ |
+| *Spectral Range*   | UV to Submillimeter            | Infrared $[600 − 3000] \ \ cm^{-1}$  |
+| *# Molecules*      | 28 (7 variables)               | 52                                   |
+| *Spectroscopic DB* | HITRAN 2012                    | GEISA 2016                           |
+| *Water Vapor*      | MT CKD (3.2)                   | MT CKD (3.2)                         |
+| *Jacobians*        |                                |                                      |
+| *Main Purpose*     | Data assimilation in NWPs      | Greenhouse Gases Retrievals          |
+
+* Full spectrum Comparison
+
+
+** Results of RTTOV vs 4A on the ARSA database
+#+BEGIN_EXPORT html
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/RTComparison-IREMIS-polar1-allbands.html"
+width="1200" height="800"></iframe>
+#+END_EXPORT
+
+** test
+
+#+BEGIN_EXPORT html
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/test.html"
+width="1000" height="800"></iframe>
+#+END_EXPORT
+
+/CEMS_data/sondage/lalandejm/RTTOV_4A/figures/test.html
+
+* Jacobian Comparison
+
+
+** Temperature 1/2
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:30%">
+#+ATTR_HTML: :width 100% :align left
+file:///home/lalandejm/Documents/Sondage/Forum/figures/jacT_1451.2cm-1.png
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:30%">
+#+ATTR_HTML: :width 100% :align left
+file:///home/lalandejm/Documents/Sondage/Forum/figures/jacT_667cm-1.png
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:30%">
+#+ATTR_HTML: :width 100% :align left
+file:///home/lalandejm/Documents/Sondage/Forum/figures/jacT_328.6cm-1.png
+#+REVEAL_HTML: </div>
+
+
+** Temperature 2/2
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_HTML: :width 80% :align right
+file:///home/lalandejm/Documents/Sondage/Forum/figures/jacT_1043.2cm-1.png
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_HTML: :width 80% :align left
+file:///home/lalandejm/Documents/Sondage/Forum/figures/jacT_722.8cm-1.png
+#+REVEAL_HTML: </div>
+
