@@ -11,7 +11,7 @@
 </style>
 <link rel="stylesheet" href="./reveal/dist/reveal.css"/>
 
-<link rel="stylesheet" href="./reveal/dist/theme/white.css" id="theme"/>
+<link rel="stylesheet" href="./reveal/dist/theme/serif.css" id="theme"/>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
@@ -20,28 +20,21 @@
 <div class="slides">
 <section id="sec-title-slide" data-background="./logo/logocnrm.png,  ./logo/logoMF-.png,  ./logo/logocnrs2.png" data-background-size="10%, 10%, 10%" data-background-position="20% 90%, 50% 90%, 80% 90%" data-background-repeat="" data-background-transition="" data-background-opacity="" data-state=""><h2>Radiative Transfer Modeling</h2> <h4>Comparison between RTTOV, 4A and IASI observations</h4> <h6>Jean-Marie Lalande, Raymond Armante, Jérôme Vidot</h6>
 </section>
-<section id="sec-table-of-contents" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity=""><div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#/slide-orgce2678c">Objectives</a></li>
-<li><a href="#/slide-orgfe54d52">The ARSA databases</a></li>
-<li><a href="#/slide-orgdecca49">RTTOV vs 4A: specificities of Radiative Transfer Codes</a></li>
-<li><a href="#/slide-org3849853">Full spectrum Comparison</a></li>
-<li><a href="#/slide-orgf11640f">Jacobian Comparison</a></li>
-</ul>
-</div>
-</div>
-</section>
 
 <section>
-<section id="slide-orgce2678c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org6cdca17" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgce2678c">Objectives</h2>
+<h2 id="org6cdca17">Objectives</h2>
 <ul>
-<li class="fragment appear">Follow recommendations from the ITSC and Trattoria on radiative transfer codes intercomparisons</li>
+<li class="fragment appear">Follow recommendations from the ITSC and Trattoria on <br> radiative transfer codes intercomparisons</li>
 <li class="fragment appear">Validation of new developments in Radiative Transfer codes</li>
-<li class="fragment appear">Identify potential systematic errors in spectroscopic databases, codes, etc</li>
+<li class="fragment appear">Identify potential systematic errors:
+<ul>
+<li>spectroscopic databases</li>
+<li>codes</li>
+<li>atmospheric models</li>
+
+</ul></li>
 
 </ul>
 
@@ -50,23 +43,29 @@
 </section>
 </section>
 <section>
-<section id="slide-orgfe54d52" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org318d8e9" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgfe54d52">The ARSA databases</h2>
+<h2 id="org318d8e9">ARSA++ database</h2>
 <div class="column" style="float:left; width:50%">
-<ul style="font-size:30px;text-align: left">
-<li> ARSA (The Analysed RadioSounding Archive+ERA-interim, 43 levels) : P, T, H<sub>2</sub>O, O<sub>3</sub>, T<sub>surf</sub> </li>
-<li> Emissivities : IREMIS </li>
-<li> Copernicus Atmospheric Monitoring Service (CAMS) : CO<sub>2</sub>, CH<sub>4</sub>
-<li> 15310 atmospheric profiles </li>
-<li> Colocated IASI observations </li>
+<ul>
+<li><b>ARSA</b> - <i>The Analysed RadioSounding Archive</i>:
+<ul>
+<li>\(P(z)\), \(T(z)\), \(H_2O(z)\)</li>
+
+</ul></li>
+<li><b>ERA-interim</b>: \(O_3(z)\), \(T_{surf}\)</li>
+<li><b>CAMS</b>: \(CO_2(z)\), \(CH_4(z)\)</li>
+<li><b>IREMIS</b>: Emissivities</li>
+<li><b>15310</b> atmospheric profiles: 43 levels, night, ocean</li>
+<li>Colocated with <b>IASI</b> observations: 100 km, +/-3 hours</li>
+
 </ul>
 </div>
 
 <div class="column" style="float:left; width:50%">
 
 <div class="figure">
-<p><img src="./fig/arsa_map.png" alt="arsa_map.png" border="yes" width="100%" align="center" />
+<p><img src="./fig/arsa_map.png" alt="arsa_map.png" border="none" width="80%" margin-left="auto" margin-right="auto" />
 </p>
 </div>
 </div>
@@ -75,84 +74,31 @@
 
 <div class="column" style="float:left; width:30%">
 <iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
-data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></iframe>
+data-src="./fig/prop_iairmass.html" dpi="300" width="400px" height="400px"></iframe>
 </div>
 
 <div class="column" style="float:left; width:70%">
 
 <div class="figure">
-<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
+<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="90%" align="center" />
 </p>
 </div>
 </div>
-
-
-<div class="slide-footer"></div>
-</section>
-<section id="slide-org2dfe85f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
-<div class="slide-header"></div>
-<h3 id="org2dfe85f">The ARSA profiles</h3>
-<div class="column" style="margin-left: auto; margin-right: auto; width:75%">
-
-<div class="figure">
-<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="75%" align="center" />
-</p>
-</div>
-</div>
-
-<div class="slide-footer"></div>
-</section>
-<section id="slide-orgac47d9f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
-<div class="slide-header"></div>
-<h3 id="orgac47d9f">Total columns of gases</h3>
-<div class="column" style="float:left; width:25%">
-
-<div class="figure">
-<p><img src="./fig/TPW_arsa_profiles.png" alt="TPW_arsa_profiles.png" border="none" width="100%" align="center" />
-</p>
-</div>
-</div>
-
-<div class="column" style="float:right; width:25%">
-
-<div class="figure">
-<p><img src="./fig/TO3_arsa_profiles.png" alt="TO3_arsa_profiles.png" border="none" width="100%" align="center" />
-</p>
-</div>
-</div>
-
-
-<div class="column" style="float:left; width:25%">
-
-<div class="figure">
-<p><img src="./fig/TCO2_arsa_profiles.png" alt="TCO2_arsa_profiles.png" border="none" width="100%" align="center" />
-</p>
-</div>
-</div>
-
-<div class="column" style="float:right; width:25%">
-
-<div class="figure">
-<p><img src="./fig/TCH4_arsa_profiles.png" alt="TCH4_arsa_profiles.png" border="none" width="100%" align="center" />
-</p>
-</div>
-</div>
-
 
 <div class="slide-footer"></div>
 </section>
 </section>
 <section>
-<section id="slide-orgdecca49" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org6328065" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgdecca49">RTTOV vs 4A: specificities of Radiative Transfer Codes</h2>
-<div class="outline-text-2" id="text-orgdecca49">
+<h2 id="org6328065">RTTOV vs 4A</h2>
+<div class="outline-text-2" id="text-org6328065">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org8bc8d23" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org152334c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org8bc8d23">RTTOV vs 4A</h3>
+<h3 id="org152334c">RTTOV vs 4A: <br> specificities of Radiative Transfer Codes</h3>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -163,8 +109,8 @@ data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></ifr
 
 <tr>
 <th scope="col" class="org-left">&#xa0;</th>
-<th scope="col" class="org-left"><b>RTTOV v13</b>\cite{Saunders2018}</th>
-<th scope="col" class="org-left"><b>4A/OP v1.7</b>\cite{Scott1981}</th>
+<th scope="col" class="org-left"><b>RTTOV v13</b></th>
+<th scope="col" class="org-left"><b>4A/OP v1.7</b></th>
 </tr>
 </thead>
 <tbody>
@@ -177,7 +123,7 @@ data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></ifr
 <tr>
 <td class="org-left"><b>Spectral Range</b></td>
 <td class="org-left">UV to Submillimeter</td>
-<td class="org-left">Infrared \([600 − 3000] \ \ cm^{-1}\)</td>
+<td class="org-left">Infrared \([100 − 14000] \ \ cm^{-1}\)</td>
 </tr>
 
 <tr>
@@ -200,8 +146,8 @@ data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></ifr
 
 <tr>
 <td class="org-left"><b>Jacobians</b></td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">&check;</td>
+<td class="org-left"> &check;</td>
 </tr>
 
 <tr>
@@ -216,91 +162,299 @@ data-src="./fig/prop_iairmass.html" dpi="300" width="300px" height="300px"></ifr
 </section>
 </section>
 <section>
-<section id="slide-org3849853" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org327bb6f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="org3849853">Full spectrum Comparison</h2>
-<div class="outline-text-2" id="text-org3849853">
+<h2 id="org327bb6f">Full spectrum Comparison per iairmass</h2>
+<div class="outline-text-2" id="text-org327bb6f">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org7b7d894" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org382bc67" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org7b7d894">Results of RTTOV vs 4A on the ARSA database</h3>
+<h3 id="org382bc67">RTTOV vs 4A: polar 1</h3>
 <iframe style="border: none; align: center"
 scrolling="no"
 data-src="./fig/RTComparison-IREMIS-polar1-allbands.html"
 width="1200" height="800"></iframe>
 
+<div style="font-size: 80%;">
+<ul>
+<li>\(667 \ \text{cm}^{−1}\) Temperature profile is biased above radiosounding</li>
+<li>\([700 − 750]\ \text{cm}^{−1}\) CO<sub>2</sub> spectroscopy</li>
+<li>\([1010 − 1080] \text{cm}^{−1}\) O<sub>3</sub> spectroscopy</li>
+<li>Offset in window channels due to ice emissivity (IREMIS vs Snyder)</li>
+
+</ul>
+</div>
+
 <div class="slide-footer"></div>
 </section>
-<section id="slide-orga270403" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-orgf659a3d" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="orga270403">test</h3>
+<h3 id="orgf659a3d">RTTOV vs 4A: mid-latitude 1</h3>
 <iframe style="border: none; align: center"
 scrolling="no"
-data-src="./fig/test.html"
-width="1000" height="800"></iframe>
+data-src="./fig/RTComparison-IREMIS-mid_lat1-allbands.html"
+width="1200" height="800"></iframe>
+
+<div style="font-size: 80%;">
+<ul>
+<li>\(667 \ \text{cm}^{−1}\) Temperature profile is biased above radiosounding</li>
+<li>\([700 − 750]\ \text{cm}^{−1}\) CO<sub>2</sub> spectroscopy</li>
+<li>\([1010 − 1080] \text{cm}^{−1}\) O<sub>3</sub> spectroscopy</li>
+<li>Offset in window channels due to ice emissivity (IREMIS vs Snyder)</li>
+
+</ul>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org2fbfbce" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org2fbfbce">RTTOV vs 4A: tropical</h3>
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/RTComparison-IREMIS-tropic-allbands.html"
+width="1200" height="800"></iframe>
+</iframe>
+
+<div style="font-size: 80%;">
+<ul>
+<li>\(\nu > 2600 \ \text{cm}^{-1}\): H<sub>2</sub>O <i>vs</i> HDO distinction in 4AOP</li>
+<li>RTTOV bias &gt; 4A bias in the H<sub>2</sub>O continuum</li>
+<li>\([2230 − 2390] \ \text{cm}^{−1}\): Problem in the CO<sub>2</sub> spectroscopy</li>
+
+</ul>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org49aef82" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="org49aef82">Full spectrum Comparison: another view</h2>
+<div class="column"  style="width:100%; margin-left:auto; margin-right:auto">
+<ul>
+<li>Spectrum differences group by iairmass and  <br> sort in ascending order of Integrated Water Vapor</li>
+<li>Differences clipped between \([-1, 1]\) Kelvins</li>
+<li>Overall performances: <b>4A</b> &gt; <b>RTTOV</b></li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width:50%">
+
+<div class="figure">
+<p><img src="./fig/obsSimRTTOV.png" alt="obsSimRTTOV.png" border="none" width="90%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width:50%">
+
+<div class="figure">
+<p><img src="./fig/obsSim4A.png" alt="obsSim4A.png" border="none" width="90%" />
+</p>
+</div>
+</div>
+
 
 
 <div class="slide-footer"></div>
 </section>
 </section>
 <section>
-<section id="slide-orgf11640f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-orgff09c5f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h2 id="orgf11640f">Jacobian Comparison</h2>
-<div class="outline-text-2" id="text-orgf11640f">
+<h2 id="orgff09c5f">Jacobian Comparison</h2>
+<div class="outline-text-2" id="text-orgff09c5f">
 </div>
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org1f53ac5" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org2402a69" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org1f53ac5">Temperature 1/2</h3>
-<div class="column" style="float:right; width:30%">
-
-<div class="figure">
-<p><img src="./fig/jacT_1451.2cm-1.png" alt="jacT_1451.2cm-1.png" width="100%" align="left" />
-</p>
-</div>
-</div>
-
-<div class="column" style="float:right; width:30%">
-
-<div class="figure">
-<p><img src="./fig/jacT_667cm-1.png" alt="jacT_667cm-1.png" width="100%" align="left" />
-</p>
-</div>
+<h3 id="org2402a69">Temperature 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_667.00_cm-1.html"
+width="420" height="500"></iframe>
 </div>
 
-<div class="column" style="float:right; width:30%">
-
-<div class="figure">
-<p><img src="./fig/jacT_328.6cm-1.png" alt="jacT_328.6cm-1.png" width="100%" align="left" />
-</p>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_722.00_cm-1.html"
+width="420" height="500"></iframe>
 </div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_875.00_cm-1.html"
+width="420" height="500"></iframe>
+</div>
+
+
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org2fd1c2c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org2fd1c2c">Temperature 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org7158aed" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org7158aed">H<sub>2</sub>O concentration 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_667.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_722.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_875.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgaefc4fe" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="orgaefc4fe">H<sub>2</sub>O concentration 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
 </div>
 
 
 <div class="slide-footer"></div>
 </section>
-<section id="slide-org69c57aa" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<section id="slide-org0a4a806" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
 <div class="slide-header"></div>
-<h3 id="org69c57aa">Temperature 2/2</h3>
-<div class="column" style="float:right; width:50%">
+<h3 id="org0a4a806">CO<sub>2</sub> concentration 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_667.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
 
-<div class="figure">
-<p><img src="./fig/jacT_1043.2cm-1.png" alt="jacT_1043.2cm-1.png" width="80%" align="right" />
-</p>
-</div>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_722.00_cm-1.html"
+width="420" height="520"></iframe>
 </div>
 
-<div class="column" style="float:right; width:50%">
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_875.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
 
-<div class="figure">
-<p><img src="file:///fig/jacT_722.8cm-1.png" alt="jacT_722.8cm-1.png" width="80%" align="left" />
-</p>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org68b4879" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org68b4879">CO<sub>2</sub> concentration 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
 </div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
 </div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgd4adf42" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orgd4adf42">Conclusions and Outlook</h2>
+<ul>
+<li>Forward problem: relatively good agreement (<b>4A</b> &gt; <b>RTTOV</b> on average)</li>
+<li>Jacobians: some <b>RTTOV</b> channels exhibit strange variations to be investigated</li>
+<li>ARSA++ future plans:
+<ul>
+<li>Include <b>ERA-5</b> in the database</li>
+<li>include new chemical species: \(CO\), \(N_2O\)</li>
+<li>Investigate the database: outliers, trends, <i>etc.</i></li>
+
+</ul></li>
+<li>RTTOV future plans:
+<ul>
+<li><b>RTTOV</b> coefficients generation is based on <b>LBLRTM 12.8</b>: <br>switch to <b>LBLRTM 13.1</b> and newer spectroscopy (Hitran 2016-2020)</li>
+<li>Investigating RTTOV coefficients</li>
+<li>PhD thesis starting September 2023 (hopefully)</li>
+
+</ul></li>
+
+</ul>
 <div class="slide-footer"></div>
 </section>
 </section>
