@@ -99,7 +99,6 @@
 
 
 # pour faire apparaitre progressivement 
-#+ATTR_REVEAL: :frag (appear)
 - Follow recommendations from the ITSC and Trattoria on @@html:<br>@@ radiative transfer codes intercomparisons
 - Validation of new developments in Radiative Transfer codes 
 - Identify potential systematic errors:
