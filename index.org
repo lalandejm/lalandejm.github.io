@@ -419,3 +419,20 @@ width="420" height="520"></iframe>
   - *RTTOV v14*: switch to properties on layer vs on level
   - Investigating RTTOV coefficients
   - PhD thesis starting September 2023 (hopefully)
+
+
+* Demande Financière
+
+| *2022*  |                                                 | *Montant*   |
+|---------+-------------------------------------------------+-------------|
+|         | *Reliquats*                                     | 12 keuros   |
+|         | *Missions* (1 specatmos, 2 IRS, 1 AMS, 1 ISSWG) | 7 keuros    |
+|         | *Total*                                         | *+5 keuros* |
+|---------+-------------------------------------------------+-------------|
+| *2023*  |                                                 |             |
+|---------+-------------------------------------------------+-------------|
+|         | *Reliquats*                                     | 5 keuros    |
+|         | *1 mission* (1 ISSWG)                           | 2 keuros    |
+|         | *1 publication*                                 | 3 keuros    |
+|---------+-------------------------------------------------+-------------|
+| *Total* |                                                 | *0*         |
