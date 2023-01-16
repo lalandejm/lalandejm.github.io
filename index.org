@@ -166,9 +166,9 @@ width="1200" height="800"></iframe>
 #+END_EXPORT
 
 #+REVEAL_HTML: <div style="font-size: 80%;">
-- $667 \ \text{cm}^{−1}$ Temperature profile is biased above radiosounding
-- $[700 − 750]\ \text{cm}^{−1}$ @@html:CO<sub>2</sub>@@ spectroscopy
-- $[1010 − 1080] \text{cm}^{−1}$ @@html:O<sub>3</sub>@@ spectroscopy
+- $667 \ \text{cm}^{−1}$: ERA-interim temperature profiles are biased above radiosounding
+- $[700 − 750]\ \text{cm}^{−1}$: @@html:CO<sub>2</sub>@@ spectroscopy
+- $[1010 − 1080] \text{cm}^{−1}$: @@html:O<sub>3</sub>@@ spectroscopy
 - Offset in window channels due to ice emissivity (IREMIS vs Snyder)
 #+REVEAL_HTML: </div>
 
@@ -181,9 +181,9 @@ width="1200" height="800"></iframe>
 #+END_EXPORT
 
 #+REVEAL_HTML: <div style="font-size: 80%;">
-- $667 \ \text{cm}^{−1}$ Temperature profile is biased above radiosounding
-- $[700 − 750]\ \text{cm}^{−1}$ @@html:CO<sub>2</sub>@@ spectroscopy
-- $[1010 − 1080] \text{cm}^{−1}$ @@html:O<sub>3</sub>@@ spectroscopy
+- $667 \ \text{cm}^{−1}$: ERA-interim temperature profile is biased above radiosounding
+- $[700 − 750]\ \text{cm}^{−1}$: @@html:CO<sub>2</sub>@@ spectroscopy
+- $[1010 − 1080] \text{cm}^{−1}$: @@html:O<sub>3</sub>@@ spectroscopy
 - Offset in window channels due to ice emissivity (IREMIS vs Snyder)
 #+REVEAL_HTML: </div>
 
@@ -407,13 +407,15 @@ width="420" height="520"></iframe>
 
 * Conclusions and Outlook
 
-- Forward problem: relatively good agreement (*4A* > *RTTOV* on average)
-- Jacobians: some *RTTOV* channels exhibit strange variations to be investigated
-- ARSA++ future plans:
+- *Forward problem*: relatively good agreement (*4A* > *RTTOV* on average)
+- *Jacobians*: some *RTTOV* channels exhibit strange variations to be investigated
+- *ARSA++ future plans*:
   - Include *ERA-5* in the database
-  - include new chemical species: $CO$, $N_2O$
+  - Include new chemical species: $CO$, $N_2O$
   - Investigate the database: outliers, trends, /etc./
-- RTTOV future plans:
+- *RTTOV future plans*:
+  - *RTTOV v14*: switch to properties on layer vs on level
   - *RTTOV* coefficients generation is based on *LBLRTM 12.8*: @@html:<br>@@switch to *LBLRTM 13.1* and newer spectroscopy (Hitran 2016-2020)
+  - *RTTOV v14*: switch to properties on layer vs on level
   - Investigating RTTOV coefficients
   - PhD thesis starting September 2023 (hopefully)
