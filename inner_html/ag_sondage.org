@@ -1,6 +1,6 @@
 
 :REVEAL_PROPERTIES:
-#+reveal_root: file:///home/lalandejm/softwares/reveal/
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 #+reveal_theme: serif
 #+reveal_title_slide_background: file:///home/lalandejm/Documents/logo/logocnrm.png, file:///home/lalandejm/Documents/logo/logoMF-.png, file:///home/lalandejm/Documents/logo/logocnrs2.png,

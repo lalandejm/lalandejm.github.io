@@ -9,9 +9,9 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="../reveal/dist/reveal.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
 
-<link rel="stylesheet" href="../reveal/dist/theme/serif.css" id="theme"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
 
 <link rel="stylesheet" href="./css/mycss.css"/>
 
@@ -21,7 +21,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'file:///home/lalandejm/softwares/reveal/css/print/pdf.css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -36,16 +36,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#/slide-orga2afb92">Staff</a></li>
-<li><a href="#/slide-orgbd1c34d">Activités</a></li>
+<li><a href="#/slide-org2089da1">Staff</a></li>
+<li><a href="#/slide-org3acae5e">Activités</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-orga2afb92">
-<h2 id="orga2afb92">Staff</h2>
+<section id="slide-org2089da1">
+<h2 id="org2089da1">Staff</h2>
 <div class="column" style="width: 85%; margin: 100px auto 500px auto">
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
@@ -85,8 +85,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgbd1c34d">
-<h2 id="orgbd1c34d">Activités</h2>
+<section id="slide-org3acae5e">
+<h2 id="org3acae5e">Activités</h2>
 <ul>
 <li><b>SAFNWP</b>
 <ul>
@@ -116,8 +116,8 @@
 
 
 </section>
-<section id="slide-org464425e">
-<h3 id="org464425e"><b>SAFNWP - Preprocessing</b></h3>
+<section id="slide-org64cdc13">
+<h3 id="org64cdc13"><b>SAFNWP - Preprocessing</b></h3>
 <div class="column" style="width: 90%; margin:auto">
 <div class="column" style="float: left; width: 35%; margin:auto; font-size: 80%">
 <ul>
@@ -154,8 +154,8 @@
 
 
 </section>
-<section id="slide-orgbab3856">
-<h3 id="orgbab3856"><b>SAFNWP - Radiative Transfer</b></h3>
+<section id="slide-orgadd6300">
+<h3 id="orgadd6300"><b>SAFNWP - Radiative Transfer</b></h3>
 <div class="column" style="float: left; width: 50%; margin:auto; font-size: 60%;">
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -319,8 +319,8 @@
 
 
 </section>
-<section id="slide-org9bbb30d">
-<h3 id="org9bbb30d"><b>TOSCA - Radiative Transfer</b></h3>
+<section id="slide-org448a23b">
+<h3 id="org448a23b"><b>TOSCA - Radiative Transfer</b></h3>
 <div class="column" style="width:70%; margin: auto">
 <div class="column" style="float:left; width:50%; margin: auto">
 
@@ -398,8 +398,8 @@
 
 
 </section>
-<section id="slide-org4ab2c3a">
-<h3 id="org4ab2c3a">*Tosca IASI: Comparaison RTTOV vs 4A/OP (LMP, X)</h3>
+<section id="slide-org0e87366">
+<h3 id="org0e87366">*Tosca IASI: Comparaison RTTOV vs 4A/OP (LMP, X)</h3>
 <div class="column" style="float:left; width:50%">
 <ul>
 <li><b>ARSA</b> - <i>The Analysed RadioSounding Archive</i>:
@@ -441,8 +441,8 @@ data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.
 
 
 </section>
-<section id="slide-org9ffb203">
-<h3 id="org9ffb203"><b>Divers</b></h3>
+<section id="slide-orgf514d04">
+<h3 id="orgf514d04"><b>Divers</b></h3>
 <ul>
 <li><b>Cours</b>
 <ul>
@@ -487,18 +487,22 @@ data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.
 </section>
 </div>
 </div>
-<script src="/home/lalandejm/softwares/reveal/dist/reveal.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/markdown/markdown.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/zoom/zoom.js"></script>
-<script src="file:///home/lalandejm/softwares/reveal/plugin/notes/notes.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-plugins: [RevealMarkdown, RevealZoom, RevealNotes],
-width:"100%", height:"100%", margin:0, center:true, display:"block"
+width:"100%", height:"100%", margin:0, center:true, display:"block",
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{src: 'js/myjs.js'},
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
 });
 
 </script>

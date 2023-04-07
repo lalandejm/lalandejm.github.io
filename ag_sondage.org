@@ -1,7 +1,6 @@
 
 :REVEAL_PROPERTIES:
-#+reveal_root: ../reveal/
-
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+reveal_theme: serif
 #+reveal_title_slide_background: ../logo/logocnrm.png, ../logoMF-.png, ../logo/logocnrs2.png,
 # file:///home/lalande/Downloads/cropped-3840-2160-1014882.jpg
@@ -11,8 +10,6 @@
 
 #+reveal_init_options: width:"100%", height:"100%", margin:0, center:true, display:"block"
 #+reveal_trans: linear
-#+reveal_extra_css: ./css/mycss.css
-#+reveal_extra_js: {src: 'js/myjs.js'}
 #+reveal_mathjax_url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 :END:
