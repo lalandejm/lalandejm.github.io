@@ -4,6 +4,6 @@
 * Welcome to my webpage
 
 ** Presentation CNES 2023
-<a href="./visite_CNES.html" rel="nofollow" title="View example.com">Here is my link</a>
+<a href="file://./visite_CNES.html" rel="nofollow" title="View example.com">Here is my link</a>
 
 ** Presentation AG CEMS 2023
