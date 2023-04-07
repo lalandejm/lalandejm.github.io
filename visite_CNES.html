@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Radiative Transfer Modeling</title>
+<meta name="author" content="Jean-Marie Lalande, Raymond Armante, Jérôme Vidot"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal/dist/theme/serif.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./logo/logocnrm.png,  ./logo/logoMF-.png,  ./logo/logocnrs2.png" data-background-size="10%, 10%, 10%" data-background-position="20% 90%, 50% 90%, 80% 90%" data-background-repeat="" data-background-transition="" data-background-opacity="" data-state=""><h2>Radiative Transfer Modeling</h2> <h4>Comparison between RTTOV, 4A and IASI observations</h4> <h6>Jean-Marie Lalande, Raymond Armante, Jérôme Vidot</h6>
+</section>
+
+<section>
+<section id="slide-org9f484a9" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="org9f484a9">Objectives</h2>
+<ul>
+<li>Follow recommendations from the ITSC and Trattoria on <br> radiative transfer codes intercomparisons</li>
+<li>Validation of new developments in Radiative Transfer codes</li>
+<li>Identify potential systematic errors:
+<ul>
+<li>spectroscopic databases</li>
+<li>codes</li>
+<li>atmospheric models</li>
+
+</ul></li>
+
+</ul>
+
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orga3270a5" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orga3270a5">ARSA++ database</h2>
+<div class="column" style="float:left; width:50%">
+<ul>
+<li><b>ARSA</b> - <i>The Analysed RadioSounding Archive</i>:
+<ul>
+<li>\(P(z)\), \(T(z)\), \(H_2O(z)\)</li>
+
+</ul></li>
+<li><b>ERA-interim</b>: \(O_3(z)\), \(T_{surf}\)</li>
+<li><b>CAMS</b>: \(CO_2(z)\), \(CH_4(z)\)</li>
+<li><b>IREMIS</b>: Emissivities</li>
+<li><b>15310</b> atmospheric profiles: 43 levels, night, ocean</li>
+<li>Colocated with <b>IASI</b> observations: 100 km, +/-3 hours</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width:50%">
+
+<div class="figure">
+<p><img src="./fig/arsa_map.png" alt="arsa_map.png" border="none" width="80%" margin-left="auto" margin-right="auto" />
+</p>
+</div>
+</div>
+
+
+
+<div class="column" style="float:left; width:30%">
+<iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
+data-src="./fig/prop_iairmass.html" dpi="300" width="400px" height="400px"></iframe>
+</div>
+
+<div class="column" style="float:left; width:70%">
+
+<div class="figure">
+<p><img src="./fig/arsa_profiles.png" alt="arsa_profiles.png" border="yes" width="90%" align="center" />
+</p>
+</div>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org71e39ea" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="org71e39ea">RTTOV vs 4A</h2>
+<div class="outline-text-2" id="text-org71e39ea">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org5a326a1" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org5a326a1">RTTOV vs 4A: <br> specificities of Radiative Transfer Codes</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<thead>
+<tr>
+</tr>
+</thead>
+
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left"><b>RTTOV v13</b></th>
+<th scope="col" class="org-left"><b>4A/OP v1.7</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Model type</b></td>
+<td class="org-left">Fast Band model\(^{\dagger}\)</td>
+<td class="org-left">Fast Line-By-Line\(^{\dagger\dagger}\)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Spectral Range</b></td>
+<td class="org-left">UV to Submillimeter</td>
+<td class="org-left">Infrared \([100 − 14000] \ \ cm^{-1}\)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b># Molecules</b></td>
+<td class="org-left">28 (7 variables)</td>
+<td class="org-left">52</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Spectroscopic DB</b></td>
+<td class="org-left">HITRAN 2012</td>
+<td class="org-left">GEISA 2016</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Water Vapor</b></td>
+<td class="org-left">MT CKD (3.2)</td>
+<td class="org-left">MT CKD (3.2)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Jacobians</b></td>
+<td class="org-left">&check;</td>
+<td class="org-left"> &check;</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Main Purpose</b></td>
+<td class="org-left">Data assimilation in NWPs</td>
+<td class="org-left">Greenhouse Gases Retrievals</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgfd2744f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orgfd2744f">Full spectrum Comparison per iairmass</h2>
+<div class="outline-text-2" id="text-orgfd2744f">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgd0ebdeb" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="orgd0ebdeb">RTTOV vs 4A: polar 1</h3>
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/RTComparison-IREMIS-polar1-allbands.html"
+width="1200" height="800"></iframe>
+
+<div style="font-size: 80%;">
+<ul>
+<li>\(667 \ \text{cm}^{−1}\): ERA-interim temperature profiles are biased above radiosounding</li>
+<li>\([700 − 750]\ \text{cm}^{−1}\): CO<sub>2</sub> spectroscopy</li>
+<li>\([1010 − 1080] \text{cm}^{−1}\): O<sub>3</sub> spectroscopy</li>
+<li>Offset in window channels due to ice emissivity (IREMIS vs Snyder)</li>
+
+</ul>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org0df1965" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org0df1965">RTTOV vs 4A: mid-latitude 1</h3>
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/RTComparison-IREMIS-mid_lat1-allbands.html"
+width="1200" height="800"></iframe>
+
+<div style="font-size: 80%;">
+<ul>
+<li>\(667 \ \text{cm}^{−1}\): ERA-interim temperature profile is biased above radiosounding</li>
+<li>\([700 − 750]\ \text{cm}^{−1}\): CO<sub>2</sub> spectroscopy</li>
+<li>\([1010 − 1080] \text{cm}^{−1}\): O<sub>3</sub> spectroscopy</li>
+<li>Offset in window channels due to ice emissivity (IREMIS vs Snyder)</li>
+
+</ul>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org551a6c5" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org551a6c5">RTTOV vs 4A: tropical</h3>
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/RTComparison-IREMIS-tropic-allbands.html"
+width="1200" height="800"></iframe>
+</iframe>
+
+<div style="font-size: 80%;">
+<ul>
+<li>\(\nu > 2600 \ \text{cm}^{-1}\): H<sub>2</sub>O <i>vs</i> HDO distinction in 4AOP</li>
+<li>RTTOV bias &gt; 4A bias in the H<sub>2</sub>O continuum</li>
+<li>\([2230 − 2390] \ \text{cm}^{−1}\): Problem in the CO<sub>2</sub> spectroscopy</li>
+
+</ul>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgb7f18f9" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orgb7f18f9">Full spectrum Comparison: another view</h2>
+<div class="column"  style="width:100%; margin-left:auto; margin-right:auto">
+<ul>
+<li>Spectrum differences group by iairmass and  <br> sort in ascending order of Integrated Water Vapor</li>
+<li>Differences clipped between \([-1, 1]\) Kelvins</li>
+<li>Overall performances: <b>4A</b> &gt; <b>RTTOV</b></li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width:50%">
+
+<div class="figure">
+<p><img src="./fig/obsSimRTTOV.png" alt="obsSimRTTOV.png" border="none" width="90%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width:50%">
+
+<div class="figure">
+<p><img src="./fig/obsSim4A.png" alt="obsSim4A.png" border="none" width="90%" />
+</p>
+</div>
+</div>
+
+
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgec62ddf" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orgec62ddf">Jacobian Comparison</h2>
+<div class="outline-text-2" id="text-orgec62ddf">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org9414787" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org9414787">Temperature 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_667.00_cm-1.html"
+width="420" height="500"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_722.00_cm-1.html"
+width="420" height="500"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_875.00_cm-1.html"
+width="420" height="500"></iframe>
+</div>
+
+
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org9cbd9ea" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org9cbd9ea">Temperature 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/Temperature_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org4a2af3b" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org4a2af3b">H<sub>2</sub>O concentration 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_667.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_722.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_875.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org48d9e19" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org48d9e19">H<sub>2</sub>O concentration 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/H2O_Concentration_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org8ac32db" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org8ac32db">CO<sub>2</sub> concentration 1/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_667.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_722.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_875.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org1f1f615" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h3 id="org1f1f615">CO<sub>2</sub> concentration 2/2</h3>
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_1025.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_1305.00_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="column" style="float:left; width:33.333%">
+<iframe style="border: none; align: center"
+scrolling="no"
+data-src="./fig/CO2_Concentration_Jacobian_at_2115.50_cm-1.html"
+width="420" height="520"></iframe>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-orgc1bbe27" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="orgc1bbe27">Conclusions and Outlook</h2>
+<ul>
+<li><b>Forward problem</b>: relatively good agreement (<b>4A</b> &gt; <b>RTTOV</b> on average)</li>
+<li><b>Jacobians</b>: some <b>RTTOV</b> channels exhibit strange variations to be investigated</li>
+<li><b>ARSA++ future plans</b>:
+<ul>
+<li>Include <b>ERA-5</b> in the database</li>
+<li>Include new chemical species: \(CO\), \(N_2O\)</li>
+<li>Investigate the database: outliers, trends, <i>etc.</i></li>
+
+</ul></li>
+<li><b>RTTOV future plans</b>:
+<ul>
+<li><b>RTTOV v14</b>: switch to properties on layer vs on level</li>
+<li><b>RTTOV</b> coefficients generation is based on <b>LBLRTM 12.8</b>: <br>switch to <b>LBLRTM 13.1</b> and newer spectroscopy (Hitran 2016-2020)</li>
+<li><b>RTTOV v14</b>: switch to properties on layer vs on level</li>
+<li>Investigating RTTOV coefficients</li>
+<li>PhD thesis starting September 2023 (hopefully)</li>
+
+</ul></li>
+
+</ul>
+
+
+<div class="slide-footer"></div>
+</section>
+</section>
+<section>
+<section id="slide-org7f36033" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="" data-background-opacity="">
+<div class="slide-header"></div>
+<h2 id="org7f36033">Demande Financière</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>2022</b></th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left"><b>Montant</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Reliquats</b></td>
+<td class="org-left">12 keuros</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Missions</b> (1 specatmos, 2 IRS, 1 AMS, 1 ISSWG)</td>
+<td class="org-left">7 keuros</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Total</b></td>
+<td class="org-left"><b>+5 keuros</b></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>2023</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Reliquats</b></td>
+<td class="org-left">5 keuros</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>1 mission</b> (1 ISSWG)</td>
+<td class="org-left">2 keuros</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>1 publication</b></td>
+<td class="org-left">3 keuros</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Total</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>0</b></td>
+</tr>
+</tbody>
+</table>
+<div class="slide-footer"></div>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal/dist/reveal.js"></script>
+<script src="./reveal/plugin/markdown/markdown.js"></script>
+<script src="./reveal/plugin/zoom/zoom.js"></script>
+<script src="./reveal/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes],
+slideNumber:false, width:"100%", height:"100%", margin:0, center:true
+});
+
+</script>
+</body>
+</html>
