@@ -3,7 +3,7 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 #+reveal_theme: serif
-#+reveal_title_slide_background: file:///home/lalandejm/Documents/logo/logocnrm.png, file:///home/lalandejm/Documents/logo/logoMF-.png, file:///home/lalandejm/Documents/logo/logocnrs2.png,
+#+reveal_title_slide_background: ../logo/logocnrm.png, ../logo/logoMF-.png, ../logo/logocnrs2.png,
 # file:///home/lalande/Downloads/cropped-3840-2160-1014882.jpg
 #+reveal_title_slide_background_size: 10%, 10%, 10%, 100%
 #+reveal_title_slide_background_position: 15% 90%, 50% 90%, 85% 90%
@@ -30,28 +30,28 @@
 <div class="column" style="width: 85%; margin: 100px auto 500px auto">
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
-<img src="./img/Sonia_Pere.jpg" class="circleimg"/>
+<img src="../img/Sonia_Pere.jpg" class="circleimg"/>
 <figcaption>Sonia Péré<br>***<br>ITM</figcaption>
 </figure>
 </div>
 
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
-<img src="./img/Thomas_lebrat.jpg" class="circleimg"/>
+<img src="../img/Thomas_lebrat.jpg" class="circleimg"/>
 <figcaption>Thomas Lebrat<br>***<br>IR - SAFNWP</figcaption>
 </figure>
 </div>
 
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
-<img src="./img/Valentin_Jules.jpg" class="circleimg"/>
+<img src="../img/Valentin_Jules.jpg" class="circleimg"/>
 <figcaption>Valentin Jules<br>***<br>Postdoctorant - C3S2</figcaption>
 </figure>
 </div>
 
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
-<img src="./img/JM_Lalande.jpg" class="circleimg"/>
+<img src="../img/JM_Lalande.jpg" class="circleimg"/>
 <figcaption>Jean-Marie Lalande<br>***<br>Chercheur</figcaption>
 </figure>
 </div>
@@ -139,7 +139,7 @@
 - Présentation *T. Lebrat* sur génération des coefficients/Base de données transmistances
 #+REVEAL_HTML: <div class="column" style="float:left; width:95%">
 #+ATTR_HTML: :border none :width:90%
-[[./figures/wess4t.png]]
+[[../fig/wess4t.png]]
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -149,11 +149,11 @@
 #+REVEAL_HTML: <div class="column" style="width:70%; margin: auto">
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin: auto">
 #+ATTR_HTML: :border none :width 70%
-[[./figures/arsa_map.png]]
+[[../fig/arsa_map.png]]
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin: auto">
 #+ATTR_HTML: :border none :width 100%
-[[./figures/arsa_profiles.png]]
+[[../fig/arsa_profiles.png]]
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -163,14 +163,14 @@
 *Proposition Forum*
 #+REVEAL_HTML: <div class="column" style="float:left;width:50%; margin:auto">
 #+ATTR_HTML: :border yes :width 100% :margin auto
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/forum_comparison_trim.png]]
+[[../fig/forum_comparison_trim.png]]
 #+REVEAL_HTML: </div>
 
 #+REVEAL_HTML: <div class="column" style="float:left;width:50%; margin:auto">
 #+ATTR_HTML: :border yes :width 100% :margin auto
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison.png]]
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison_std.png]]
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison_CWC.png]]
+[[../fig/TangChouComparison.png]]
+[[../fig/TangChouComparison_std.png]]
+[[../fig/TangChouComparison_CWC.png]]
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -179,12 +179,12 @@
 *Proposition IASI*
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin:auto">
 #+ATTR_HTML: :border yes :width 100%  :margin auto
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/obsSimRTTOV.png]]
+[[../fig/obsSimRTTOV.png]]
 #+REVEAL_HTML: </div>
 
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin:auto">
 #+ATTR_HTML: :border yes :width 100%  :margin auto
-[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/obsSim4A.png]]
+[[../fig/obsSim4A.png]]
 #+REVEAL_HTML: </div>
 *Perspectives*
 #+REVEAL_HTML: <div class="column" style="width: 100%; font-size: 90%;">
@@ -231,6 +231,8 @@ data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.
 
 
 ** *Divers*
+
+* Perspectives
 
 - *Cours*
  - ENSTA : Intervention de 4h
