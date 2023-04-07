@@ -10,3 +10,7 @@
 #+END_EXPORT
 
 ** Presentation AG CEMS 2023
+
+#+BEGIN_EXPORT html
+<a href="file://./ag_sondage.html" title="RTTOV 4A CNES">Here is my link</a>
+#+END_EXPORT
