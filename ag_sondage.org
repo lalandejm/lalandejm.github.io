@@ -1,0 +1,258 @@
+
+:REVEAL_PROPERTIES:
+#+reveal_root: ../reveal/
+
+#+reveal_theme: serif
+#+reveal_title_slide_background: ../logo/logocnrm.png, ../logoMF-.png, ../logo/logocnrs2.png,
+# file:///home/lalande/Downloads/cropped-3840-2160-1014882.jpg
+#+reveal_title_slide_background_size: 10%, 10%, 10%, 100%
+#+reveal_title_slide_background_position: 15% 90%, 50% 90%, 85% 90%
+#+reveal_title_slide: <h2>%t</h2> <h4>%s</h4> <h6>%a</h6>
+
+#+reveal_init_options: width:"100%", height:"100%", margin:0, center:true, display:"block"
+#+reveal_trans: linear
+#+reveal_extra_css: ./css/mycss.css
+#+reveal_extra_js: {src: 'js/myjs.js'}
+#+reveal_mathjax_url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+:END:
+  
+#+TITLE: Bilan d'activités à CEMS/Sondage
+#+SUBTITLE: Assemblée Générale du CEMS <2023-04-11 mar.>
+#+AUTHOR: Péré S., Lebrat T., Jules V., Lalande J.-M.,
+#+MAIL: jean-marie.lalande@meteo.fr
+
+#+OPTIONS: d:nil toc:1 num:nil timestamp:nil
+
+* Staff
+
+#+begin_export html
+<div class="column" style="width: 85%; margin: 100px auto 500px auto">
+<div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
+<figure>
+<img src="./img/Sonia_Pere.jpg" class="circleimg"/>
+<figcaption>Sonia Péré<br>***<br>ITM</figcaption>
+</figure>
+</div>
+
+<div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
+<figure>
+<img src="./img/Thomas_lebrat.jpg" class="circleimg"/>
+<figcaption>Thomas Lebrat<br>***<br>IR - SAFNWP</figcaption>
+</figure>
+</div>
+
+<div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
+<figure>
+<img src="./img/Valentin_Jules.jpg" class="circleimg"/>
+<figcaption>Valentin Jules<br>***<br>Postdoctorant - C3S2</figcaption>
+</figure>
+</div>
+
+<div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
+<figure>
+<img src="./img/JM_Lalande.jpg" class="circleimg"/>
+<figcaption>Jean-Marie Lalande<br>***<br>Chercheur</figcaption>
+</figure>
+</div>
+</div><br>
+#+end_export
+
+#+ATTR_HTML: :style  font-size: 40px
+- Prochain transfert le 01/09/2023 : *Marie Boisserie*, DIROP/PG/LABO
+- 2 départs fin 2022 : *Pascale Roquet* (retraite) & *Mathieu Asseray* (DIROI/PREVI)
+
+* Activités
+
+- *SAFNWP*
+ - *WP Radiative Transfer*
+ - *WP Preprocessing*
+- @@html:<b>@@T@@html:</b>@@erre-@@html:<b>@@O@@html:</b>@@céan-@@html:<b>@@S@@html:</b>@@urface @@html:<b>@@C@@html:</b>@@ontinentale-@@html:<b>@@A@@html:</b>@@tmosphère (financement CNES)
+ - *IASI*: proposition à l'arrêt suite à la dernière évaluation du comité *TOSCA*
+ - *Forum*: proposition soumise à l'APR 2023 (1ère soumission 2020)
+- *Copernicus Climate Change* - Phase 2 (Présentation de *V. Jules*)
+- Autres activités +/- débutées :
+ - Aéorosols (J. Ceamanos, GMME/VEGEO)
+ - Images Satellites Prévues (P. Chambon, GMAP/OBS)
+ - RTTOV IA - Émuler RTTOV avec un réseau de neurone (Début stage 11 avril - Présentation S. Péré)
+ - Comparaison RTTOV/DISAMAR dans l'ultraviolet
+
+
+
+
+** *SAFNWP - Preprocessing*
+
+
+#+REVEAL_HTML: <div class="column" style="width: 90%; margin:auto">
+#+REVEAL_HTML: <div class="column" style="float: left; width: 35%; margin:auto; font-size: 80%">
+- Développements de AAPP the /ATOVS and AVHRR Pre-processing Package/
+ - @@html:<font size="5em">@@Masque nuageux MAIA pour NOAA 21 (AAPP 8.10)@@html:</font>@@
+ - @@html:<font size="5em">@@Ajoût modèle ECMWF (AAPP 8.11)@@html:</font>@@
+- Gestion/Maintenance traitement locale IASI - /gestion de crise/
+ - @@html:<font size="5em">@@Niveaux 1C assimilés dans le modèle de PNT@@html:</font>@@
+- Gestion/Maintenance du site de monitoring - /gestion de crise/
+ - @@html:<font size="5em">@@Dernier en date *3 avril*: changement de la compression des données IASI/Eumetsat@@html:</font>@@
+ - @@html:<font size="5em">@@Demande d'un Apprentis pour la gestion web, traitement@@html:</font>@@
+- *Lorsque l'on pourra* : Refonte du site web monitoring
+- *Mi 2024* : démarrage des activités concernant IASI-NG
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float: left; width: 65%; margin:auto">
+#+BEGIN_EXPORT html
+<iframe scrolling="yes" data-src="http://www.umr-cnrm.fr/nwpsaf/" width="100%" height="800px"></iframe>
+#+END_EXPORT
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: </div>
+
+
+
+** *SAFNWP - Radiative Transfer*
+
+#+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto; font-size: 60%;">
+
+| Plateforme   | Instrument | Type                        | Origine |
+|--------------+------------+-----------------------------+---------|
+| NOAA-21      | *VIIRS*    | /Multispectral/LEO/         | SAFNWP  |
+| LandSat-7    | *ETM*      | /Multispectral/LEO/         | SAFNWP  |
+| FY4-B        | *AGRI*     | /Multispectral/GEO/         | SAFNWP  |
+|              | *GIIRS*    | /Hyperspectral/GEO/         | SAFNWP  |
+| Dummyhi      | *Dummy10*  | /Hyperspectral-Box-car/     |         |
+| Dummyhi      | *Dummy11*  | /Hyperspectral//            | Scalian |
+| DMSP 1-4     | *SSH*      |                             | C3S2    |
+| Oceansat     | *SSTM*     | /Multispectral/             | SAFNWP  |
+| Dummyhi      |            | /None Disclosure Agreement/ | JMA     |
+| MTG          | *FCI*      | /Multispectral/GEO/         |         |
+| Meteor       | *SI*       | /Hyperspectral/LEO/         | C3S2    |
+| Nimbus-4     | *PMR*      | /Gas Pressure Modulation/   | C3S2    |
+|              | *IRIS*     | /Hyperspectral-Far IR/      | C3S2    |
+|              | *Forum*    | /Hyperspectral-Far IR/      | TOSCA   |
+| Nimbus-4 & 5 | *SCR*      | Multispectral               | C3S2    |
+| FY3E         | *HIRAS 2*  |                             | SAFNWP  |
+| CO2M         | *CLIM*     |                             | SAFNWP  |
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto; font-size: 80%;">
+- Requêtes principalement du SAFNWP Helpdesk
+- C3S2
+- Quelques requêtes directes concernant des nouveaux concepts instrumentaux
+- Présentation *T. Lebrat* sur génération des coefficients/Base de données transmistances
+#+REVEAL_HTML: <div class="column" style="float:left; width:95%">
+#+ATTR_HTML: :border none :width:90%
+[[./figures/wess4t.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+
+** *TOSCA - Radiative Transfer*
+
+#+REVEAL_HTML: <div class="column" style="width:70%; margin: auto">
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin: auto">
+#+ATTR_HTML: :border none :width 70%
+[[./figures/arsa_map.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin: auto">
+#+ATTR_HTML: :border none :width 100%
+[[./figures/arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left;width:100%; margin:auto">
+#+REVEAL_HTML: <div class="column" style="width:90%; margin:auto">
+#+REVEAL_HTML: <div class="column" style="float:left;width:50%; margin:auto">
+*Proposition Forum*
+#+REVEAL_HTML: <div class="column" style="float:left;width:50%; margin:auto">
+#+ATTR_HTML: :border yes :width 100% :margin auto
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/forum_comparison_trim.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left;width:50%; margin:auto">
+#+ATTR_HTML: :border yes :width 100% :margin auto
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison.png]]
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison_std.png]]
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/TangChouComparison_CWC.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin:auto">
+*Proposition IASI*
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin:auto">
+#+ATTR_HTML: :border yes :width 100%  :margin auto
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/obsSimRTTOV.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%; margin:auto">
+#+ATTR_HTML: :border yes :width 100%  :margin auto
+[[file:///home/lalandejm/Documents/Sondage/reporting/PresSondage/figures/obsSim4A.png]]
+#+REVEAL_HTML: </div>
+*Perspectives*
+#+REVEAL_HTML: <div class="column" style="width: 100%; font-size: 90%;">
+- Les activités comparasions des codes de transfert radiatif seront uniquement réalisées dans le TOSCA Forum
+- Arrêt du TOSCA IASI: un article en cours d'écriture pour faire le bilan de ces activités
+- *En 2024* : proposition d'un TOSCA Transfert Radiatif (CNRM/LMD /etc./)
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+
+
+** *Tosca IASI: Comparaison RTTOV vs 4A/OP (LMP, X)
+    
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+- *ARSA* - /The Analysed RadioSounding Archive/:
+  - $P(z)$, $T(z)$, $H_2O(z)$
+- *ERA-interim*: $O_3(z)$, $T_{surf}$
+- *CAMS*: $CO_2(z)$, $CH_4(z)$
+- *IREMIS*: Emissivities
+- *15310* atmospheric profiles: 43 levels, night, ocean
+- Colocated with *IASI* observations: 100 km, +/-3 hours
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_HTML: :border none :width 80% :margin-left auto :margin-right auto
+[[/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/arsa_map.png]]
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:30%">
+#+ATTR_HTML: :border yes :width 100% :align center
+#+BEGIN_EXPORT html
+<iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
+data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/prop_iairmass.html" dpi="300" width="400px" height="400px"></iframe>
+#+END_EXPORT
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:70%">
+#+ATTR_HTML: :border yes :width 90% :align center
+[[/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/arsa_profiles.png]]
+#+REVEAL_HTML: </div>
+
+
+
+** *Divers*
+
+- *Cours*
+ - ENSTA : Intervention de 4h
+ - ENSATT : Création d'un module de 18h
+ - Formation télédétection spatiales (MF): 4H
+ - Contact avec le Master TELENVI (Agro-Rennes)
+
+- *Objectifs rentrée 2023*
+ - Recrutement d'un doctorant sur contrat *SAFNWP*
+ - Formation Marie Boisserie
+
+- *Publications*
+ - Matoza et al., 2022, Science
+ - Lalande et al. 2022, AMT
+ 
+- *En préparation*
+ - Publication intercomparaison RTTOV/4A
+ - Publication Wess4T
+ - Suite de l'article de Science
+
+- *Conférences*
+ - Eumetsat, Bruxelles, Septembre 2022
+ - ITSC, Troms&euro;
+
+ 
