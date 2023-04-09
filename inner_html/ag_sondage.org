@@ -99,7 +99,7 @@
 
 #+REVEAL_HTML: <div class="column" style="float: left; width: 65%; margin:auto">
 #+BEGIN_EXPORT html
-<iframe scrolling="yes" src="http://www.umr-cnrm.fr/nwpsaf/" width="100%" height="800px"></iframe>
+<embed type="text/html" scrolling="yes" src="http://www.umr-cnrm.fr/nwpsaf/" width="100%" height="800px"></embed>
 #+END_EXPORT
 #+REVEAL_HTML: </div>
 
