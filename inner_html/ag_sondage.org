@@ -99,7 +99,7 @@
 
 #+REVEAL_HTML: <div class="column" style="float: left; width: 65%; margin:auto">
 #+BEGIN_EXPORT html
-<iframe scrolling="yes" data-src="http://www.umr-cnrm.fr/nwpsaf/" width="100%" height="800px"></iframe>
+<iframe scrolling="yes" src="http://www.umr-cnrm.fr/nwpsaf/" width="100%" height="800px"></iframe>
 #+END_EXPORT
 #+REVEAL_HTML: </div>
 
@@ -119,7 +119,7 @@
 |              | *GIIRS*    | /Hyperspectral/GEO/         | SAFNWP  |
 | Dummyhi      | *Dummy10*  | /Hyperspectral-Box-car/     |         |
 | Dummyhi      | *Dummy11*  | /Hyperspectral//            | Scalian |
-| DMSP 1-4     | *SSH*      |                             | C3S2    |
+| DMSP 1-4     | *SSH*      | /Multispectral/             | C3S2    |
 | Oceansat     | *SSTM*     | /Multispectral/             | SAFNWP  |
 | Dummyhi      |            | /None Disclosure Agreement/ | JMA     |
 | MTG          | *FCI*      | /Multispectral/GEO/         |         |
@@ -127,8 +127,8 @@
 | Nimbus-4     | *PMR*      | /Gas Pressure Modulation/   | C3S2    |
 |              | *IRIS*     | /Hyperspectral-Far IR/      | C3S2    |
 |              | *Forum*    | /Hyperspectral-Far IR/      | TOSCA   |
-| Nimbus-4 & 5 | *SCR*      | Multispectral               | C3S2    |
-| FY3E         | *HIRAS 2*  |                             | SAFNWP  |
+| Nimbus-4 & 5 | *SCR*      | /Multispectral/             | C3S2    |
+| FY3E         | *HIRAS 2*  | /Multispectral/             | SAFNWP  |
 | CO2M         | *CLIM*     |                             | SAFNWP  |
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto; font-size: 80%;">
@@ -204,8 +204,8 @@
 
 #+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto">
 - *Cours*
- - ENSTA : Intervention de 4h
- - ENSATT : Création d'un module de 18h
+ - *ENSTA - Bretagne* : Intervention de 4h
+ - *ENSATT - Lannion* : Création d'un module de 18h
  - Formation télédétection spatiales (MF): 4H
  - Contact avec le Master TELENVI (Agro-Rennes)
 
@@ -221,7 +221,7 @@
  - Lalande et al. 2022, AMT
  
 - *En préparation*
- - Publication intercomparaison RTTOV/4A
+ - Intercomparaison RTTOV/4A
  - Publication Wess4T
  - Suite de l'article de Science
 
