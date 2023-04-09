@@ -50,7 +50,7 @@
 
 <div class="column" style="float: left; width: 25%; margin-bottom: 20px;">
 <figure>
-<img src="../img/JM_Lalande.jpg" class="circleimg"/>
+<img src="../img/maluku.jpeg" class="circleimg"/>
 <figcaption>Jean-Marie Lalande<br>***<br>Chercheur</figcaption>
 </figure>
 </div>
