@@ -3,16 +3,15 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 #+reveal_theme: serif
-#+reveal_title_slide_background: ../logo/logocnrm.png, ../logo/logoMF-.png, ../logo/logocnrs2.png,
-# file:///home/lalande/Downloads/cropped-3840-2160-1014882.jpg
-#+reveal_title_slide_background_size: 10%, 10%, 10%, 100%
+#+reveal_title_slide_background: ../logo/logocnrm.png, ../logo/logoMF-.png, ../logo/logocnrs2.png
+#+reveal_title_slide_background_size: 10%, 10%, 10%
 #+reveal_title_slide_background_position: 15% 90%, 50% 90%, 85% 90%
 #+reveal_title_slide: <h2>%t</h2> <h4>%s</h4> <h6>%a</h6>
 
 #+reveal_init_options: width:"100%", height:"100%", margin:0, center:true, display:"block"
 #+reveal_trans: linear
-#+reveal_extra_css: ./css/mycss.css
-#+reveal_extra_js: {src: 'js/myjs.js'}
+#+reveal_extra_css: ../css/mycss.css
+#+reveal_extra_js: {src: '../js/myjs.js'}
 #+reveal_mathjax_url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 :END:
@@ -134,9 +133,9 @@
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto; font-size: 80%;">
 - Requêtes principalement du SAFNWP Helpdesk
-- C3S2
+- C3S2 (Instruments historiques pour l'assimilation dans ERA-6)
 - Quelques requêtes directes concernant des nouveaux concepts instrumentaux
-- Présentation *T. Lebrat* sur génération des coefficients/Base de données transmistances
+- Présentation *T. Lebrat* sur la génération des coefficients/Base de données transmittances
 #+REVEAL_HTML: <div class="column" style="float:left; width:95%">
 #+ATTR_HTML: :border none :width:90%
 [[../fig/wess4t.png]]
@@ -197,43 +196,13 @@
 
 
 
-** *Tosca IASI: Comparaison RTTOV vs 4A/OP (LMP, X)
-    
-#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
-- *ARSA* - /The Analysed RadioSounding Archive/:
-  - $P(z)$, $T(z)$, $H_2O(z)$
-- *ERA-interim*: $O_3(z)$, $T_{surf}$
-- *CAMS*: $CO_2(z)$, $CH_4(z)$
-- *IREMIS*: Emissivities
-- *15310* atmospheric profiles: 43 levels, night, ocean
-- Colocated with *IASI* observations: 100 km, +/-3 hours
-#+REVEAL_HTML: </div>
-
-#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
-#+ATTR_HTML: :border none :width 80% :margin-left auto :margin-right auto
-[[/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/arsa_map.png]]
-#+REVEAL_HTML: </div>
 
 
-#+REVEAL_HTML: <div class="column" style="float:left; width:30%">
-#+ATTR_HTML: :border yes :width 100% :align center
-#+BEGIN_EXPORT html
-<iframe style="border:3px; margin-left:auto; margin-right:auto;" scrolling="no"
-data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/prop_iairmass.html" dpi="300" width="400px" height="400px"></iframe>
-#+END_EXPORT
-#+REVEAL_HTML: </div>
+* Divers/Conclusions/Perspectives
 
-#+REVEAL_HTML: <div class="column" style="float:left; width:70%">
-#+ATTR_HTML: :border yes :width 90% :align center
-[[/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.github.io/fig/arsa_profiles.png]]
-#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="width: 80%; margin:auto">
 
-
-
-** *Divers*
-
-* Perspectives
-
+#+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto">
 - *Cours*
  - ENSTA : Intervention de 4h
  - ENSATT : Création d'un module de 18h
@@ -243,7 +212,10 @@ data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.
 - *Objectifs rentrée 2023*
  - Recrutement d'un doctorant sur contrat *SAFNWP*
  - Formation Marie Boisserie
+#+REVEAL_HTML: </div>
 
+
+#+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto">
 - *Publications*
  - Matoza et al., 2022, Science
  - Lalande et al. 2022, AMT
@@ -254,7 +226,8 @@ data-src="/home/lalandejm/Documents/Sondage/reporting/RTTOV_4A/public/lalandejm.
  - Suite de l'article de Science
 
 - *Conférences*
- - Eumetsat, Bruxelles, Septembre 2022
- - ITSC, Troms&euro;
-
+ - *Eumetsat*, Bruxelles, septembre 2022
+ - *ITSC*, Troms@@html:&#248;@@, mars 2023
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
  
