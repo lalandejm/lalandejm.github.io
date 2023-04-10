@@ -98,8 +98,10 @@
 #+REVEAL_HTML: </div>
 
 #+REVEAL_HTML: <div class="column" style="float: left; width: 65%; margin:auto">
+#+ATTR_HTML: :border none :width 90%
+[[./fig/printscreen_preprocessing.png]]
 #+BEGIN_EXPORT html
-<embed type="text/html" scrolling="yes" src="http://nwpsaf.meteo-spatiale.fr/Index.php" width="100%" height="800px"></embed>
+<p>Check out <a href="http://www.umr-cnrm.fr/nwpsaf/" target="_blank" rel="noopener noreferrer">IASI monitoring</a>.</p>
 #+END_EXPORT
 #+REVEAL_HTML: </div>
 
@@ -137,6 +139,12 @@
 - Quelques requêtes directes concernant des nouveaux concepts instrumentaux
 - Présentation *T. Lebrat* sur la génération des coefficients/Base de données transmittances
 #+REVEAL_HTML: <div class="column" style="float:left; width:95%">
+#+ATTR_HTML: :border yes :width 20% :margin auto
+[[../fig/option.png]]
+#+ATTR_HTML: :border yes :width 10% :margin auto
+[[../fig/exemple.png]]
+#+ATTR_HTML: :border yes :width 20% :margin auto
+[[../fig/BT.png]]
 #+ATTR_HTML: :border none :width:90%
 [[../fig/wess4t.png]]
 #+REVEAL_HTML: </div>
