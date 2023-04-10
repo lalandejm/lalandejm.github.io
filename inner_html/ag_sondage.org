@@ -99,7 +99,7 @@
 
 #+REVEAL_HTML: <div class="column" style="float: left; width: 65%; margin:auto">
 #+ATTR_HTML: :border none :width 90%
-[[./fig/printscreen_preprocessing.png]]
+[[../fig/printscreen_preprocessing.png]]
 #+BEGIN_EXPORT html
 <p>Check out <a href="http://www.umr-cnrm.fr/nwpsaf/" target="_blank" rel="noopener noreferrer">IASI monitoring</a>.</p>
 #+END_EXPORT
@@ -132,22 +132,41 @@
 | Nimbus-4 & 5 | *SCR*      | /Multispectral/             | C3S2    |
 | FY3E         | *HIRAS 2*  | /Multispectral/             | SAFNWP  |
 | CO2M         | *CLIM*     |                             | SAFNWP  |
+
+#+REVEAL_HTML: <div class="column" style="float: left; width: 100%; margin:auto; font-size: 140%;">
+*Perspectives 2024-2023 :*
++ Lancement de *RTTOV v14* début *2024*
+ - Gel du code *fin mai 2023*
+ - Redéfinition des propriétés atmosphériques @@html:&#8594@@ *couches* /versus/ *niveaux*
+ - Recalcul des *bases de transmittances*
+ - Refonte de l'interface utilisateurs @@html:&#8594@@ fort impact *RTTOV-GUI*
++ Intégration de Wess4T dans *SAFNWP*
+#+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float: left; width: 50%; margin:auto; font-size: 80%;">
-- Requêtes principalement du SAFNWP Helpdesk
+- Requêtes provenant principalement du SAFNWP Helpdesk
 - C3S2 (Instruments historiques pour l'assimilation dans ERA-6)
 - Quelques requêtes directes concernant des nouveaux concepts instrumentaux
 - Présentation *T. Lebrat* sur la génération des coefficients/Base de données transmittances
 #+REVEAL_HTML: <div class="column" style="float:left; width:95%">
-#+ATTR_HTML: :border yes :width 20% :margin auto
+#+REVEAL_HTML: <div class="column" style="float:left; width:30%">
+#+ATTR_HTML: :border yes :width 100% :margin auto
 [[../fig/option.png]]
-#+ATTR_HTML: :border yes :width 10% :margin auto
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width:39%">
+#+ATTR_HTML: :border yes :width 100% :margin auto
 [[../fig/exemple.png]]
-#+ATTR_HTML: :border yes :width 20% :margin auto
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width:30%">
+#+ATTR_HTML: :border yes :width 100% :margin auto
 [[../fig/BT.png]]
+#+REVEAL_HTML: </div>
 #+ATTR_HTML: :border none :width:90%
 [[../fig/wess4t.png]]
 #+REVEAL_HTML: </div>
+#+BEGIN_EXPORT html
+<p>Check out <a href="https://sounding.trainhub.eumetsat.int/" target="_blank" rel="noopener noreferrer">Wess4t application</a>.</p>
+#+END_EXPORT
 #+REVEAL_HTML: </div>
 
 
